@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 
 export function Home() {
+  const navigate = useNavigate();
+
   return (
     <>
       <Layout />
@@ -28,7 +31,9 @@ export function Home() {
           </p>
         </button>
       </section>
-      <button>내 성격 알아보러 가기</button>
+      <button onClick={() => navigate("/test-page")}>
+        내 성격 알아보러 가기
+      </button>
     </>
   );
 }

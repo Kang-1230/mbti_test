@@ -31,6 +31,7 @@ const Layout = ({ children }) => {
             {isAuthenticated ? (
               <>
                 <button onClick={handleLogout}>로그아웃</button>
+                <Link to={"/profile"}>프로필</Link>
               </>
             ) : (
               <Link to="/login">로그인</Link>

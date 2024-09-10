@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { API_URL, login } from "../api/auth";
+import { API_URL } from "../api/auth";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
@@ -33,7 +33,7 @@ const AuthForm = ({ mode }) => {
           login(data.accessToken);
           setIsAuthenticated(true);
           alert("Login success!");
-          // <Navigate/>
+          navigate("/");
         } else {
           alert("Login failed");
         }

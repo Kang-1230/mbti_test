@@ -2,7 +2,7 @@
 //AccessToken을 LocalStorage에 저장하고, 인증 상태를 전역적으로
 
 import { createContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext();
 
@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem("accessToken");
     setIsAuthenticated(false);
-    navigation("/");
+    // <Navigate to="/" />;
   };
 
   return (
