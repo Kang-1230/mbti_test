@@ -30,9 +30,7 @@ const Layout = ({ children }) => {
           <div className="space-x-4">
             {isAuthenticated ? (
               <>
-                <Link to="프로필">
-                  <button onClick={handleLogout}>로그아웃</button>
-                </Link>
+                <button onClick={handleLogout}>로그아웃</button>
               </>
             ) : (
               <Link to="/login">로그인</Link>
