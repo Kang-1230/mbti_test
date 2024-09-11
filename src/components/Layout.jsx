@@ -1,10 +1,11 @@
 import { useContext, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
 
-const Layout = ({ children }) => {
+const Layout = () => {
   const navigate = useNavigate();
   const { isAuthenticated, logout } = useContext(AuthContext);
+  const location = useLocation();
 
   //로그인 하지 않은 사용자를 alert 메세지와 함께 로그인 페이지로 보내기
   useEffect(() => {
@@ -31,7 +32,9 @@ const Layout = ({ children }) => {
             {isAuthenticated ? (
               <>
                 <button onClick={handleLogout}>로그아웃</button>
-                <Link to={"/profile"}>프로필</Link>
+                {location.pathname !== "/profile" && (
+                  <Link to={"/profile"}>프로필</Link>
+                )}
               </>
             ) : (
               <Link to="/login">로그인</Link>
@@ -39,7 +42,9 @@ const Layout = ({ children }) => {
           </div>
         </nav>
       </header>
-      <main className="container mx-auto pt-10 main">{children}</main>
+      <main className="container mx-auto pt-10 main">
+        <Outlet />
+      </main>
     </div>
   );
 };

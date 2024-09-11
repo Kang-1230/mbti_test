@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useState } from "react";
 
 const API_URL = "http://localhost:5000/testResults";
 
@@ -7,12 +8,11 @@ export const getTestResults = async () => {
   return response.data;
 };
 
-console.log(getTestResults);
-
-// export const createTestResult = async (resultData) => {
-//   const getTestResult = await axios.get(API_URL);
-//   return getTestResult.resultData;
-// };
+export const createTestResult = async (resultData) => {
+  console.log(resultData);
+  const getTestResult = await axios.post(API_URL, resultData);
+  return getTestResult.data;
+};
 
 // export const deleteTestResult = async (id) => {};
 

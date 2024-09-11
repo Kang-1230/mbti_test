@@ -14,8 +14,7 @@ const AuthForm = ({ mode }) => {
   });
 
   const navigate = useNavigate();
-  const { login, logout, isAuthenticated, setIsAuthenticated } =
-    useContext(AuthContext);
+  const { login, setIsAuthenticated } = useContext(AuthContext);
 
   // 바꾼 id, password를 제출 버튼을 눌렀을 때 axios를 사용해 로그인 요청을 서버에 보낸다.
   const handleSubmit = async (e) => {

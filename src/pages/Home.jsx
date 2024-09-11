@@ -1,12 +1,10 @@
 import { useNavigate } from "react-router-dom";
-import Layout from "../components/Layout";
 
 export function Home() {
   const navigate = useNavigate();
 
   return (
     <>
-      <Layout />
       <h1>무료 성격 테스트</h1>
       <h3>자신의 성격 유형을 확인할 수 있도록 솔직하게 답변해 주세요.</h3>
       <section>
