@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { getTestResults } from "../api/testResults";
 import TestResultList from "../components/TestResultList";
+import { AuthContext } from "../contexts/AuthContext";
 
-const TestResult = ({ user }) => {
+const TestResult = () => {
   const [results, setResults] = useState([]);
+  const Context = useContext(AuthContext);
 
   const fetchResults = async () => {
     const data = await getTestResults();
@@ -30,7 +32,7 @@ const TestResult = ({ user }) => {
         </h1>
         <TestResultList
           results={results}
-          user={user}
+          user={Context.user}
           onUpdate={handleUpdate}
           onDelete={handleDelete}
         />

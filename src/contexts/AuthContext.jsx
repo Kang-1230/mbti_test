@@ -14,11 +14,7 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const token = localStorage.getItem("accessToken");
-    // const getUser = async () => {
-    //   const user = await getUserProfile(token)
-    //   isAuthenticated ? setUser(user) : setUser(null);
-    // }
-    // console.log(token);
+
     isAuthenticated
       ? getUserProfile(token).then((data) => {
           setUser(data);

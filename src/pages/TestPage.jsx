@@ -12,12 +12,13 @@ const TestPage = () => {
   const handleTestSubmit = async (answers) => {
     const result = calculateMBTI(answers);
     const resultData = {
-      userId: user.id,
+      userId: user?.id,
       nickname: user.nickname,
       result,
       answers,
       date: new Date().toISOString(),
       visibility: true,
+      title: `당신의 성격은 ${result}입니다.`,
     };
     await createTestResult(resultData);
     navigate("/test-result-page");

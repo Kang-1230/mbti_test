@@ -4,7 +4,7 @@ import { Login } from "../pages/Login";
 import Profile from "../pages/Profile";
 import { Signup } from "../pages/Signup";
 import TestPage from "../pages/TestPage";
-import { TestResultPage } from "../pages/TestResultPage";
+import TestResultPage from "../pages/TestResultPage";
 import { AuthProvider } from "../contexts/AuthContext";
 import Layout from "../components/Layout";
 
