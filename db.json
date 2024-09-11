@@ -1,0 +1,66 @@
+{
+  "testResults": [
+    {
+      "id": "dd6f",
+      "userId": "test7138",
+      "nickname": "테스트7138",
+      "result": "INFP",
+      "answers": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "date": "2024-09-11T05:35:10.487Z",
+      "visibility": true,
+      "title": "당신의 성격은 INFP입니다."
+    },
+    {
+      "id": "74fb",
+      "userId": "test7138",
+      "nickname": "테스트7138",
+      "result": "INFP",
+      "answers": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "date": "2024-09-11T05:36:16.573Z",
+      "visibility": true,
+      "title": "당신의 성격은 INFP입니다."
+    }
+  ]
+}
